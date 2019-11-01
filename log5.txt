@@ -1,0 +1,24 @@
+_________Queue Tests_________
+
+Tests in format expected: actual: passed:true/false
+
+Empty Constructor test: 
+true Size should be: 0, Actual: 0
+
+enqueue 2 elements, check both size and IsEmpty, peek to make sure values match: 
+true Size should be: 1, Actual: 1
+true IsEmpty should return false, Actual: false
+true Peek should be: "element", Actual: element
+true Size should be: 2, Actual: 2
+true IsEmpty should return false, Actual: false
+true Peek should be: "element", Actual: element
+
+
+
+dequeue 2 elements, check both size and IsEmpty, peek to make sure values match: 
+ERROR: java.lang.NullPointerException
+
+
+Catching empty Queue exceptions: 
+ERROR: dequeued from an empty Queue
+ERROR: java.lang.NullPointerException

@@ -5,6 +5,18 @@ public class Queue<E>{
 
     public void enqueue(E element){
 
+        if(!isEmpty()) {
+            Node newNode = new Node(element);
+            back.setBack(newNode);
+            back = newNode;
+            this.size++;
+        } else {
+            Node newNode = new Node(element);
+            front = newNode;
+            back = newNode;
+            this.size++;
+        }
+
     }
 
     public E dequeue(){
@@ -12,14 +24,14 @@ public class Queue<E>{
     }
 
     public boolean isEmpty(){
-        return size == 0;
+        return this.size == 0 && this.front == null && this.back == null;
     }
 
     public int size(){
-        return size;
+        return this.size;
     }
 
     public E peek(){
-        return null;
+        return front.getData();
     }
 }
