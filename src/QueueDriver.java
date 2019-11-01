@@ -140,7 +140,8 @@ public class QueueDriver {
 
         } catch(Exception e){
             //check if it's the right exception
-                results += "ERROR: " + e + "\n";
+                results += e.toString().equals("java.lang.Exception: Tried to dequeue an empty stack") + " ERROR: " +
+                        e + "\n";
         }
 
         try{
@@ -153,7 +154,8 @@ public class QueueDriver {
 
         } catch(Exception e){
             //what happens if code throws an error
-                results += "ERROR: " + e + "\n";
+                results += e.toString().equals("java.lang.Exception: Tried to peek at an empty stack") + " ERROR: " +
+                        e + "\n";
 
         }
 
