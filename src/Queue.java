@@ -1,9 +1,7 @@
 public class Queue<E>{
     private Node<E> front;
     private Node<E> back;
-    public Queue(){
-
-    }
+    private int size;
 
     public void enqueue(E element){
 
@@ -14,11 +12,11 @@ public class Queue<E>{
     }
 
     public boolean isEmpty(){
-        return false;
+        return size == 0;
     }
 
     public int size(){
-        return -100;
+        return size;
     }
 
     public E peek(){
