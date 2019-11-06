@@ -27,7 +27,7 @@ public class QueueDriver {
                    "\n";
 
 
-        }catch(Exception e){
+        } catch(Exception e){
             //what happens if code throws an error
 
            results+="ERROR: " + e + "\n";
@@ -70,7 +70,7 @@ public class QueueDriver {
             results += (enqueueQueue.peek().equals("element")) + " Peek should be: \"element\", Actual: "
                     + enqueueQueue.peek() + "\n\n";
 
-        }catch(Exception e){
+        } catch(Exception e){
             //what happens if code throws an error
 
             results+="ERROR: " + e + "\n";
@@ -119,7 +119,7 @@ public class QueueDriver {
             //test isEmpty after 2nd dequeue
             results+= (dequeueQueue.isEmpty()) + " IsEmpty should return true, Actual: " + dequeueQueue.isEmpty() +
                     "\n";
-        }catch(Exception e){
+        } catch(Exception e){
             //what happens if code throws an error
 
             results+="ERROR: " + e + "\n";
@@ -140,7 +140,7 @@ public class QueueDriver {
 
         } catch(Exception e){
             //check if it's the right exception
-                results += e.toString().equals("java.lang.Exception: Tried to dequeue an empty stack") + " ERROR: " +
+                results += e.toString().equals("java.lang.Exception: Tried to dequeue an empty queue") + " ERROR: " +
                         e + "\n";
         }
 
@@ -154,7 +154,7 @@ public class QueueDriver {
 
         } catch(Exception e){
             //what happens if code throws an error
-                results += e.toString().equals("java.lang.Exception: Tried to peek at an empty stack") + " ERROR: " +
+                results += e.toString().equals("java.lang.Exception: Tried to peek at an empty queue") + " ERROR: " +
                         e + "\n";
 
         }
